@@ -39,7 +39,7 @@ const swaggerSpec = swaggerJSDoc(options);
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
-// app.use(require("connect-history-api-fallback")()); // comment it when testing dev server
+app.use(require("connect-history-api-fallback")()); // comment it when testing dev server
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, "../public");
